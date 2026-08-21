@@ -225,6 +225,8 @@ img {
 .game-shell { overflow: hidden; border: 1px solid var(--navy); border-radius: 12px; background: var(--navy); box-shadow: 0 22px 40px var(--shadow); }
 .game-topline, .game-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; color: var(--cloud); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .game-topline span:last-child { color: #a9c9df; }
+.reset-button { margin-left: auto; border: 1px solid #89a6b9; border-radius: 5px; padding: 0.45rem 0.7rem; background: transparent; color: var(--white); font: inherit; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; }
+.reset-button:hover { background: rgba(255, 255, 255, 0.12); }
 .felt { min-height: 390px; padding: 2rem 1.25rem; background: radial-gradient(circle at 50% 40%, #3d7697, #24516e 72%); color: var(--white); }
 .hand-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.75rem; }
 .hand-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; color: #c8e0ec; }

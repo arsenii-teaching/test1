@@ -19,7 +19,8 @@ const elements = {
   bet: document.getElementById('bet-amount'),
   hit: document.getElementById('hit-button'),
   stand: document.getElementById('stand-button'),
-  deal: document.getElementById('deal-button')
+  deal: document.getElementById('deal-button'),
+  reset: document.getElementById('reset-button')
 };
 
 const createDeck = () => suits.flatMap((suit) => ranks.map((rank) => ({ suit, rank })));
@@ -66,7 +67,7 @@ const dealHand = () => {
   dealerHand = [deck.pop(), deck.pop()];
   handActive = true;
   elements.message.textContent = 'Your move. Hit or stand.';
-  elements.deal.textContent = 'New hand';
+  elements.deal.textContent = 'Deal again';
   setButtons(true);
   renderGame();
   if (handValue(playerHand) === 21) finishRound('Blackjack. A beautiful start.', bet + Math.floor(bet * 1.5));
@@ -92,6 +93,11 @@ const stand = () => {
 };
 
 elements.deal?.addEventListener('click', () => { round += 1; dealHand(); });
+elements.reset?.addEventListener('click', () => {
+  bankroll = 500;
+  round = 1;
+  dealHand();
+});
 elements.hit?.addEventListener('click', hit);
 elements.stand?.addEventListener('click', stand);
 dealHand();
