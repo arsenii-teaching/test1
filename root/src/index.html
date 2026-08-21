@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Studio</title>
+    <meta
+      name="description"
+      content="A small interactive landing page for a digital studio."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a href="#top" class="logo" aria-label="Northstar Studio home">Northstar</a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+          <span></span>
+        </label>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Creative digital studio</p>
+            <h1>Build a clearer path to your next big idea.</h1>
+            <p class="hero-text">
+              We design thoughtful brand experiences, conversion-focused websites,
+              and user journeys that help people move from interest to action.
+            </p>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#contact">Book a Call</a>
+              <a class="btn btn-secondary" href="#about">Learn More</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="stat-card stat-primary">
+              <span class="card-label">Launches</span>
+              <strong>48+</strong>
+            </div>
+            <div class="stat-card stat-secondary">
+              <span class="card-label">Client growth</span>
+              <strong>3.8x</strong>
+            </div>
+            <div class="dashboard-card">
+              <div class="chart-bars">
+                <span style="height: 35%"></span>
+                <span style="height: 55%"></span>
+                <span style="height: 68%"></span>
+                <span style="height: 82%"></span>
+                <span style="height: 100%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container about-grid">
+          <div class="about-image">
+            <div class="image-frame">
+              <div class="image-content">
+                <span>Strategy</span>
+                <span>Design</span>
+                <span>Growth</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <p class="section-tag">About</p>
+            <h2>We turn ideas into experiences people remember.</h2>
+            <p>
+              Northstar helps growing businesses sharpen their message, simplify
+              their customer journey, and create digital experiences that feel as
+              strong as they perform.
+            </p>
+            <p>
+              From launch strategy to refined web design, we combine clarity,
+              creativity, and practical execution to help your brand stand out.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <p class="section-tag">Services</p>
+          <h2>Everything you need to move forward.</h2>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Brand Strategy</h3>
+              <p>Positioning, messaging, and stories that make your offer easy to trust.</p>
+            </article>
+            <article class="service-card">
+              <h3>Website Design</h3>
+              <p>Responsive landing pages and digital experiences built for clarity.</p>
+            </article>
+            <article class="service-card">
+              <h3>Growth Support</h3>
+              <p>Campaign ideas and conversion-focused improvements that support momentum.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container contact-wrap">
+          <div class="contact-copy">
+            <p class="section-tag">Contact</p>
+            <h2>Let’s build something meaningful.</h2>
+            <p>
+              Tell us a little about your goals and we’ll reach out with next steps.
+            </p>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+              <span class="error-message" data-error-for="name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+              <span class="error-message" data-error-for="email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error-message" data-error-for="message"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="form-success" class="form-success" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Northstar Studio</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
