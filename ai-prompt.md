@@ -6,8 +6,8 @@
 - Deployment: GitHub Pages
 
 ## Design Goals
-- One‑page landing with a hero section, an about section, and a contact form.
-- Responsive (mobile‑first).
+- Make a minimalistic blackjack casino.
+- Say hello to Terry.
 - Light, modern colour palette (#2c3e50, #ecf0f1, #3498db).
 
 ## AI Prompts

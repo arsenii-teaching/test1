@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Northstar Studio</title>
+    <title>Terry's Table | Blackjack</title>
     <meta
       name="description"
-      content="A small interactive landing page for a digital studio."
+      content="A minimal blackjack table made for Terry."
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-shell">
-        <a href="#top" class="logo" aria-label="Northstar Studio home">Northstar</a>
+        <a href="#top" class="logo" aria-label="Terry's Table home">
+          <span class="logo-mark">T</span>
+          <span>Terry's Table</span>
+        </a>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
@@ -21,46 +24,45 @@
         </label>
 
         <nav class="site-nav" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+          <a href="#table">Play</a>
+          <a href="#about">The House</a>
+          <a href="#contact">Say Hello</a>
         </nav>
       </div>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="container hero-content">
-          <div class="hero-copy">
-            <p class="eyebrow">Creative digital studio</p>
-            <h1>Build a clearer path to your next big idea.</h1>
-            <p class="hero-text">
-              We design thoughtful brand experiences, conversion-focused websites,
-              and user journeys that help people move from interest to action.
-            </p>
-            <div class="cta-group">
-              <a class="btn btn-primary" href="#contact">Book a Call</a>
-              <a class="btn btn-secondary" href="#about">Learn More</a>
+      <section id="table" class="hero">
+        <div class="container">
+          <div class="hero-heading">
+            <div>
+              <p class="eyebrow">A quiet game for a sharp player</p>
+              <h1>Welcome to the table, Terry.</h1>
             </div>
+            <p class="hero-text">Beat the dealer without going over 21. The house is ready when you are.</p>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
-            <div class="stat-card stat-primary">
-              <span class="card-label">Launches</span>
-              <strong>48+</strong>
-            </div>
-            <div class="stat-card stat-secondary">
-              <span class="card-label">Client growth</span>
-              <strong>3.8x</strong>
-            </div>
-            <div class="dashboard-card">
-              <div class="chart-bars">
-                <span style="height: 35%"></span>
-                <span style="height: 55%"></span>
-                <span style="height: 68%"></span>
-                <span style="height: 82%"></span>
-                <span style="height: 100%"></span>
+          <div class="game-shell" aria-label="Blackjack game">
+            <div class="game-topline"><span>Blackjack</span><span id="round-count">Round 1</span></div>
+            <div class="felt">
+              <div class="hand-row">
+                <div class="hand-heading"><span class="hand-label">Dealer</span><strong id="dealer-score">?</strong></div>
+                <div id="dealer-hand" class="cards" aria-label="Dealer's cards"></div>
               </div>
+              <div class="table-message" id="game-message" role="status">Your move. Hit or stand.</div>
+              <div class="hand-row player-row">
+                <div class="hand-heading"><span class="hand-label">Terry</span><strong id="player-score">0</strong></div>
+                <div id="player-hand" class="cards" aria-label="Terry's cards"></div>
+              </div>
+            </div>
+            <div class="game-controls">
+              <label class="bet-control" for="bet-amount">Bet <span>$</span><input id="bet-amount" type="number" min="5" max="500" step="5" value="25" /></label>
+              <div class="action-buttons">
+                <button class="btn btn-primary" id="hit-button" type="button">Hit</button>
+                <button class="btn btn-secondary" id="stand-button" type="button">Stand</button>
+                <button class="btn btn-quiet" id="deal-button" type="button">New hand</button>
+              </div>
+              <p class="bankroll">Bankroll <strong id="bankroll">$500</strong></p>
             </div>
           </div>
         </div>
@@ -68,50 +70,16 @@
 
       <section id="about" class="about">
         <div class="container about-grid">
-          <div class="about-image">
-            <div class="image-frame">
-              <div class="image-content">
-                <span>Strategy</span>
-                <span>Design</span>
-                <span>Growth</span>
-              </div>
-            </div>
-          </div>
-
           <div class="about-copy">
-            <p class="section-tag">About</p>
-            <h2>We turn ideas into experiences people remember.</h2>
-            <p>
-              Northstar helps growing businesses sharpen their message, simplify
-              their customer journey, and create digital experiences that feel as
-              strong as they perform.
-            </p>
-            <p>
-              From launch strategy to refined web design, we combine clarity,
-              creativity, and practical execution to help your brand stand out.
-            </p>
+            <p class="section-tag">The house rules</p>
+            <h2>Simple rules. Good company.</h2>
+            <p>Cards are dealt from a fresh deck each round. The dealer stands on 17, aces count as 1 or 11, and a blackjack pays 3:2.</p>
+            <p>No noise, no neon, no pressure. Just you, the cards, and one more hand.</p>
           </div>
-        </div>
-      </section>
-
-      <section id="services" class="services">
-        <div class="container">
-          <p class="section-tag">Services</p>
-          <h2>Everything you need to move forward.</h2>
-
-          <div class="service-grid">
-            <article class="service-card">
-              <h3>Brand Strategy</h3>
-              <p>Positioning, messaging, and stories that make your offer easy to trust.</p>
-            </article>
-            <article class="service-card">
-              <h3>Website Design</h3>
-              <p>Responsive landing pages and digital experiences built for clarity.</p>
-            </article>
-            <article class="service-card">
-              <h3>Growth Support</h3>
-              <p>Campaign ideas and conversion-focused improvements that support momentum.</p>
-            </article>
+          <div class="rule-list" aria-label="Blackjack rules">
+            <div><span>01</span><strong>Get close to 21</strong><p>Face cards are 10, aces are flexible.</p></div>
+            <div><span>02</span><strong>Read the table</strong><p>Dealer reveals their hole card after you stand.</p></div>
+            <div><span>03</span><strong>Leave with more</strong><p>Win the hand and your bet returns with winnings.</p></div>
           </div>
         </div>
       </section>
@@ -120,9 +88,9 @@
         <div class="container contact-wrap">
           <div class="contact-copy">
             <p class="section-tag">Contact</p>
-            <h2>Let’s build something meaningful.</h2>
+            <h2>Say hello to the house.</h2>
             <p>
-              Tell us a little about your goals and we’ll reach out with next steps.
+              Got a lucky streak, a rule question, or a message for Terry? Drop us a line.
             </p>
           </div>
 
@@ -154,7 +122,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© 2026 Northstar Studio</p>
+        <p>© 2026 Terry's Table · Play responsibly</p>
       </div>
     </footer>
 
