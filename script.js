@@ -1,4 +1,4 @@
-const pageButtons = document.querySelectorAll('.nav-link');
+const pageButtons = document.querySelectorAll('[data-page]');
 const pagePanels = document.querySelectorAll('.page-panel');
 
 const showPage = (pageId) => {
