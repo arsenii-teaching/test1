@@ -17,6 +17,7 @@
         <button class="nav-link active" type="button" data-page="home" aria-pressed="true">Home</button>
         <button class="nav-link" type="button" data-page="instructions" aria-pressed="false">Day 3 Instruction</button>
         <button class="nav-link" type="button" data-page="sample" aria-pressed="false">Sample placeholder site</button>
+        <button class="nav-link" type="button" data-page="blackjack" aria-pressed="false">Blackjack</button>
       </nav>
       <span class="header-status"><i></i> Workshop 03</span>
     </header>
@@ -59,6 +60,34 @@
       <section id="sample" class="page-panel sample-panel" aria-labelledby="sample-title">
         <div class="sample-copy"><p class="kicker">Generated starter / Arsenii</p><h1 id="sample-title">Hello, <em>Arsenii.</em></h1><p class="intro-copy">This is a small placeholder site made from the Day 3 prompt. It starts simple so the next idea has somewhere to go.</p><button id="greeting-button" class="primary-button" type="button">Give me a random greeting <span aria-hidden="true">↗</span></button><p id="greeting-output" class="greeting-output" role="status" aria-live="polite">Your next greeting is waiting.</p></div>
         <div class="sample-window" aria-label="Sample placeholder site preview"><div class="window-bar"><span></span><span></span><span></span><small>arsenii-site / index.html</small></div><div class="window-content"><p class="window-label">A tiny beginning</p><div class="window-avatar">A</div><h2>Make something<br /><em>worth opening.</em></h2><div class="window-line"></div><p>HTML. CSS. JavaScript.<br />One idea at a time.</p></div></div>
+      </section>
+
+      <section id="blackjack" class="page-panel blackjack-panel" aria-labelledby="blackjack-title">
+        <div class="blackjack-copy">
+          <p class="kicker">Blackjack / Minimal casino</p>
+          <h1 id="blackjack-title">Hello to <em>Terry!</em></h1>
+          <p class="intro-copy">Pull up a chair, Terry. Beat the dealer without going over 21 — aces count as 1 or 11, and blackjack pays 3 to 2.</p>
+          <p class="chip-status">Terry's chips<strong id="chips-value">100</strong></p>
+        </div>
+        <div class="blackjack-table" role="group" aria-label="Blackjack table">
+          <div class="window-bar"><span></span><span></span><span></span><small>terry-casino / blackjack</small></div>
+          <div class="table-content">
+            <div class="hand-block">
+              <p class="hand-label">Dealer <span id="dealer-score" class="hand-score"></span></p>
+              <div id="dealer-cards" class="card-row"></div>
+            </div>
+            <p id="game-status" class="game-status" role="status" aria-live="polite">Welcome to the table, Terry. Each deal costs 10 chips.</p>
+            <div class="hand-block">
+              <p class="hand-label">Terry <span id="player-score" class="hand-score"></span></p>
+              <div id="player-cards" class="card-row"></div>
+            </div>
+            <div class="table-actions">
+              <button id="deal-button" class="table-button deal" type="button">Deal <small>10 chips</small></button>
+              <button id="hit-button" class="table-button" type="button" disabled>Hit</button>
+              <button id="stand-button" class="table-button" type="button" disabled>Stand</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer><span>TN-AI</span><span>Learn by making</span></footer>
