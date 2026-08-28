@@ -3,310 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TN-IA | Coding Club</title>
-    <meta
-      name="description"
-      content="TN-IA coding club workspace with a blackjack page and workshop guidance."
-    />
+    <title>TN-AI | Learn, build, experiment</title>
+    <meta name="description" content="TN-AI Day 3 workshop instructions and a sample site by Arsenii." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Page selector">
-        <div class="brand-block">
-          <div class="brand-mark">T</div>
-          <div>
-            <p class="brand-label">TN-IA</p>
-            <p class="brand-subtitle">Coding Club</p>
-          </div>
+    <header class="site-header">
+      <a class="brand" href="#instructions" aria-label="TN-AI home"><span class="brand-mark">TN</span><span>TN-AI</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-link active" type="button" data-page="instructions" aria-pressed="true">Day 3 Instruction</button>
+        <button class="nav-link" type="button" data-page="sample" aria-pressed="false">Sample placeholder site</button>
+      </nav>
+      <span class="header-status"><i></i> Workshop 03</span>
+    </header>
+
+    <main>
+      <section id="instructions" class="page-panel active" aria-labelledby="instructions-title">
+        <div class="page-intro">
+          <p class="kicker">Third meeting / 10 steps</p>
+          <h1 id="instructions-title">From a blank folder<br /><em>to a live site.</em></h1>
+          <p class="intro-copy">A practical guide to setting up your tools, working with Cline, and publishing your first creative experiment.</p>
         </div>
-
-        <nav class="page-nav" aria-label="Main pages">
-          <button class="page-button active" type="button" data-page="home">Home</button>
-          <button class="page-button" type="button" data-page="tn-ai-day-3">TN-AI Day 3</button>
-          <button class="page-button" type="button" data-page="alt-tab">AltTab</button>
-          <button class="page-button" type="button" data-page="blackjack">Blackjack</button>
-          <button class="page-button" type="button" data-page="contact">Contact</button>
-        </nav>
-
-        <div class="sidebar-note">
-          <span class="status-dot"></span>
-          Work in progress - draft test
-        </div>
-      </aside>
-
-      <main class="content-panel">
-        <section id="home" class="page-panel active" aria-label="Home page">
-          <div class="panel-header">
-            <p class="eyebrow">Coding Club Workshop</p>
-            <h1>TN-IA</h1>
-          </div>
-
-          <div class="welcome-card">
-            <p class="panel-tag">Setup guide</p>
-            <h2>Set up VS Code + Continue for coding</h2>
-            <p>
-              This page is a working draft for the TN-IA coding club task. Use the
-              project brief in <strong>ai-prompt.md</strong> to guide your build and keep iterating.
-            </p>
-          </div>
-
-          <div class="steps-grid">
-            <article class="step-card">
-              <span>01</span>
-              <h3>Install VS Code</h3>
-              <p>Download the editor, open your project folder, and make sure Git is available.</p>
-            </article>
-            <article class="step-card">
-              <span>02</span>
-              <h3>Open the workspace</h3>
-              <p>Use the folder for this project and keep your files organized as you build.</p>
-            </article>
-            <article class="step-card">
-              <span>03</span>
-              <h3>Install Continue</h3>
-              <p>Extend VS Code with Continue so AI assistance works directly in your editor.</p>
-            </article>
-            <article class="step-card">
-              <span>04</span>
-              <h3>Follow the brief</h3>
-              <p>Open <strong>ai-prompt.md</strong> and use it as a working reference while you code.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="tn-ai-day-3" class="page-panel" aria-label="TN-AI Day 3 instructions">
-          <div class="panel-header">
-            <p class="eyebrow">Workshop guide</p>
-            <h2>TN-AI Day 3</h2>
-          </div>
-
-          <div class="instruction-intro">
-            <p class="panel-tag">Third meeting</p>
-            <h3>Build your first small site</h3>
-            <p>Follow the steps below to set up VS Code, ask Cline to create a starter project, and test it in your browser.</p>
-          </div>
-
-          <div class="instruction-list">
-            <article class="instruction-step">
-              <div class="instruction-number">01</div>
-              <div><h3>Install VS Code</h3><p>Download and install Visual Studio Code.</p></div>
-            </article>
-            <article class="instruction-step">
-              <div class="instruction-number">02</div>
-              <div>
-                <h3>Install Cline</h3>
-                <p>Install the Cline extension. It is easier to set up than Continue for this session.</p>
-                <figure class="instruction-media"><img src="instruction-3/image.png" alt="Cline extension in the VS Code extensions view" loading="lazy" /><figcaption>Find Cline in the Extensions view.</figcaption></figure>
-              </div>
-            </article>
-            <article class="instruction-step">
-              <div class="instruction-number">03</div>
-              <div><h3>Connect your account</h3><p>Register with your school email, agree to the terms, and choose the free GLM-5.3-Flash model.</p></div>
-            </article>
-            <article class="instruction-step">
-              <div class="instruction-number">04</div>
-              <div><h3>Create and open a folder</h3><p>Create a new folder in your preferred work directory, then open it in VS Code.</p></div>
-            </article>
-            <article class="instruction-step">
-              <div class="instruction-number">05</div>
-              <div>
-                <h3>Write your prompt</h3>
-                <p>Create a file called <strong>prompts.md</strong> and add the starter site request below.</p>
-                <pre class="prompt-block"><code># My Site Project
+        <div class="instruction-grid">
+          <article class="instruction-card"><div class="step-number">01</div><div><h2>Install VS Code</h2><p>Download and install Visual Studio Code.</p></div></article>
+          <article class="instruction-card has-media"><div class="step-number">02</div><div><h2>Install Cline</h2><p>Install the Cline extension. It is easier to set up than Continue for this session.</p><figure><img src="instruction-3/image.png" alt="Cline extension in the VS Code extensions view" loading="lazy" /><figcaption>Find Cline in the Extensions view.</figcaption></figure></div></article>
+          <article class="instruction-card"><div class="step-number">03</div><div><h2>Connect your account</h2><p>Register with your school email, agree to everything, and choose the free GLM-5.3-Flash model.</p></div></article>
+          <article class="instruction-card"><div class="step-number">04</div><div><h2>Create a project folder</h2><p>Create a new folder in your preferred work directory, then open it in VS Code.</p></div></article>
+          <article class="instruction-card prompt-card"><div class="step-number">05</div><div><h2>Create <code>prompts.md</code></h2><p>Add this starter request to the new file.</p><pre><code># My Site Project
 - Create a placeholder site using html+css+javascripts.
 - Don't use fancy graphics [will be changed later].
 - Input greeting for me. My name is Input Name.
-- Create a button that gives random greeting.</code></pre>
-              </div>
-            </article>
-            <article class="instruction-step">
-              <div class="instruction-number">06</div>
-              <div>
-                <h3>Ask Cline to execute prompts.md</h3>
-                <p>Give Cline the file and let it generate the starter project.</p>
-                <figure class="instruction-media"><img src="instruction-3/image-1.png" alt="Cline reading and executing the prompts markdown file" loading="lazy" /><figcaption>Ask Cline to execute the prompt.</figcaption></figure>
-              </div>
-            </article>
-            <article class="instruction-step">
-              <div class="instruction-number">07</div>
-              <div>
-                <h3>Install Live Server</h3>
-                <p>Install the Live Server extension to preview your project quickly.</p>
-                <figure class="instruction-media"><img src="instruction-3/image-2.png" alt="Live Server extension in the VS Code extensions view" loading="lazy" /><figcaption>Install Live Server.</figcaption></figure>
-              </div>
-            </article>
-            <article class="instruction-step">
-              <div class="instruction-number">08</div>
-              <div>
-                <h3>Preview your site</h3>
-                <p>Right-click the generated <strong>index.html</strong> and choose Open with Live Server. Then make it more creative.</p>
-                <figure class="instruction-media"><img src="instruction-3/image-3.png" alt="Open with Live Server option in the VS Code context menu" loading="lazy" /><figcaption>Open the generated page with Live Server.</figcaption></figure>
-              </div>
-            </article>
-          </div>
-        </section>
+- Create a button that gives random greeting.</code></pre></div></article>
+          <article class="instruction-card has-media"><div class="step-number">06</div><div><h2>Ask Cline to execute it</h2><p>Give Cline the file and let it generate the starter project.</p><figure><img src="instruction-3/image-1.png" alt="Cline reading and executing the prompts markdown file" loading="lazy" /><figcaption>Ask Cline to execute the prompt.</figcaption></figure></div></article>
+          <article class="instruction-card has-media"><div class="step-number">07</div><div><h2>Install Live Server</h2><p>Install the Live Server extension to preview your project quickly.</p><figure><img src="instruction-3/image-2.png" alt="Live Server extension in the VS Code extensions view" loading="lazy" /><figcaption>Install Live Server.</figcaption></figure></div></article>
+          <article class="instruction-card has-media"><div class="step-number">08</div><div><h2>Preview your site</h2><p>Right-click the generated <code>index.html</code> and choose Open with Live Server.</p><figure><img src="instruction-3/image-3.png" alt="Open with Live Server option in the VS Code context menu" loading="lazy" /><figcaption>Open the generated page.</figcaption></figure></div></article>
+          <article class="instruction-card closing-card"><div class="step-number">09</div><div><h2>Make it yours</h2><p>Change the text, colours, and layout. Small edits are already creative decisions.</p></div></article>
+          <article class="instruction-card closing-card"><div class="step-number">10</div><div><h2>Enjoy the experiment</h2><p>Keep exploring. The fastest way to learn is to make something you want to see.</p></div></article>
+        </div>
+      </section>
 
-        <section id="alt-tab" class="page-panel" aria-label="AltTab game page">
-          <div class="panel-header">
-            <p class="eyebrow">Mini Game</p>
-            <h2>Alt+Tab Challenge</h2>
-          </div>
-
-          <div class="alt-tab-layout">
-            <div class="phone-sim" aria-label="TikTok distraction simulation">
-              <div class="phone-header">
-                <span>9:41</span>
-                <span>📶</span>
-              </div>
-              <div class="phone-screen">
-                <div class="video-card pulse">
-                  <span class="video-tag">For You</span>
-                  <h3>"Just one more video..."</h3>
-                </div>
-                <div class="video-card muted">
-                  <span class="video-tag">Focus mode</span>
-                  <h3>Open your project instead</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="alt-tab-game">
-              <div class="score-row">
-                <span>Focus score</span>
-                <strong id="alt-tab-score">0</strong>
-              </div>
-              <div class="meter" aria-label="Focus meter">
-                <span id="alt-tab-meter"></span>
-              </div>
-              <div class="timer-row">
-                <span>Time left</span>
-                <strong id="alt-tab-time">15s</strong>
-              </div>
-
-              <div class="reaction-scene" aria-label="Teacher approaching player">
-                <div class="teacher-zone">
-                  <div class="teacher" id="teacher-avatar" aria-label="Teacher moving toward the student">👨‍🏫</div>
-                </div>
-                <div class="student-desk" aria-label="Student desk">💻</div>
-              </div>
-
-              <div class="alt-actions">
-                <button class="btn btn-primary" id="alt-tab-start" type="button">Start</button>
-                <button class="btn btn-secondary alt-secondary" id="alt-tab-action" type="button">Back to coding</button>
-                <button class="btn btn-quiet" id="alt-tab-reset" type="button">Reset</button>
-              </div>
-              <p id="alt-tab-message" class="alt-message">Press Start and stay focused.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="blackjack" class="page-panel" aria-label="Blackjack page">
-          <div class="hero">
-            <div class="hero-heading">
-              <div>
-                <p class="eyebrow">A quiet game for a sharp player</p>
-                <h2>Welcome to the table, Terry.</h2>
-              </div>
-              <p class="hero-text">
-                Beat the dealer without going over 21. The house is ready when you are.
-              </p>
-            </div>
-
-            <div class="game-shell" aria-label="Blackjack game">
-              <div class="game-topline">
-                <span>Blackjack</span>
-                <span id="round-count">Round 1</span>
-                <button class="reset-button" id="reset-button" type="button">Reset game</button>
-              </div>
-              <div class="felt">
-                <div class="hand-row">
-                  <div class="hand-heading">
-                    <span class="hand-label">Dealer</span>
-                    <strong id="dealer-score">?</strong>
-                  </div>
-                  <div id="dealer-hand" class="cards" aria-label="Dealer's cards"></div>
-                </div>
-                <div class="table-message" id="game-message" role="status">Your move. Hit or stand.</div>
-                <div class="hand-row player-row">
-                  <div class="hand-heading">
-                    <span class="hand-label">Terry</span>
-                    <strong id="player-score">0</strong>
-                  </div>
-                  <div id="player-hand" class="cards" aria-label="Terry's cards"></div>
-                </div>
-              </div>
-              <div class="game-controls">
-                <label class="bet-control" for="bet-amount">Bet <span>$</span>
-                  <input id="bet-amount" type="number" min="5" max="500" step="5" value="25" />
-                </label>
-                <div class="action-buttons">
-                  <button class="btn btn-primary" id="hit-button" type="button">Hit</button>
-                  <button class="btn btn-secondary" id="stand-button" type="button">Stand</button>
-                  <button class="btn btn-quiet" id="deal-button" type="button">Deal again</button>
-                </div>
-                <p class="bankroll">Bankroll <strong id="bankroll">$500</strong></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="about">
-            <div class="about-grid">
-              <div class="about-copy">
-                <p class="section-tag">The house rules</p>
-                <h3>Simple rules. Good company.</h3>
-                <p>Cards are dealt from a fresh deck each round. The dealer stands on 17, aces count as 1 or 11, and a blackjack pays 3:2.</p>
-                <p>No noise, no neon, no pressure. Just you, the cards, and one more hand.</p>
-              </div>
-              <div class="rule-list" aria-label="Blackjack rules">
-                <div><span>01</span><strong>Get close to 21</strong><p>Face cards are 10, aces are flexible.</p></div>
-                <div><span>02</span><strong>Read the table</strong><p>Dealer reveals their hole card after you stand.</p></div>
-                <div><span>03</span><strong>Leave with more</strong><p>Win the hand and your bet returns with winnings.</p></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="page-panel" aria-label="Contact page">
-          <div class="panel-header">
-            <p class="eyebrow">Contact</p>
-            <h2>Say hello to the house.</h2>
-          </div>
-
-          <div class="contact-wrap">
-            <div class="contact-copy">
-              <p>
-                Got a lucky streak, a rule question, or a message for Terry? Drop us a line.
-              </p>
-            </div>
-
-            <form id="contact-form" class="contact-form" novalidate>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required />
-                <span class="error-message" data-error-for="name"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required />
-                <span class="error-message" data-error-for="email"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <span class="error-message" data-error-for="message"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary">Send Message</button>
-              <p id="form-success" class="form-success" aria-live="polite"></p>
-            </form>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <script type="module" src="main.js"></script>
+      <section id="sample" class="page-panel sample-panel" aria-labelledby="sample-title">
+        <div class="sample-copy"><p class="kicker">Generated starter / Arsenii</p><h1 id="sample-title">Hello, <em>Arsenii.</em></h1><p class="intro-copy">This is a small placeholder site made from the Day 3 prompt. It starts simple so the next idea has somewhere to go.</p><button id="greeting-button" class="primary-button" type="button">Give me a random greeting <span aria-hidden="true">↗</span></button><p id="greeting-output" class="greeting-output" role="status" aria-live="polite">Your next greeting is waiting.</p></div>
+        <div class="sample-window" aria-label="Sample placeholder site preview"><div class="window-bar"><span></span><span></span><span></span><small>arsenii-site / index.html</small></div><div class="window-content"><p class="window-label">A tiny beginning</p><div class="window-avatar">A</div><h2>Make something<br /><em>worth opening.</em></h2><div class="window-line"></div><p>HTML. CSS. JavaScript.<br />One idea at a time.</p></div></div>
+      </section>
+    </main>
+    <footer><span>TN-AI</span><span>Learn by making</span></footer>
+    <script src="script.js"></script>
   </body>
 </html>
