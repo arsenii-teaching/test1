@@ -1,5 +1,5 @@
 # Project: My Small Interactive Site
-
+IGNORE THIS
 ## Tech Stack
 - HTML5, CSS3, JavaScript (vanilla)
 - No external libraries (to keep it lightweight)

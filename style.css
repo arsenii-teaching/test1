@@ -29,3 +29,13 @@ h1, h2 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.04em; }h1 
 footer { display: flex; justify-content: space-between; max-width: 1240px; margin: auto; padding: 1.5rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.75rem; }footer span:first-child { color: var(--ink); font-weight: 700; }@keyframes enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 760px) { .site-header { flex-wrap: wrap; padding: 1rem 1.25rem; gap: 1rem; }.site-nav { order: 3; width: 100%; justify-content: center; }.header-status { margin-left: auto; }main { padding: 3.5rem 1.25rem 5rem; }.instruction-grid { grid-template-columns: 1fr; }.has-media, .prompt-card { grid-column: span 1; }.sample-panel.active { display: flex; flex-direction: column; align-items: stretch; gap: 3rem; }.window-content { min-height: 390px; padding: 2rem; }.window-label { margin-bottom: 3rem; }footer { padding: 1.25rem; }}
 @media (max-width: 480px) { .nav-link { flex: 1; padding: 0.55rem 0.45rem; font-size: 0.7rem; }.site-nav { display: grid; grid-template-columns: 1fr 1fr; }.header-status { font-size: 0.68rem; }h1 { font-size: 3.3rem; }.sample-copy h1 { font-size: 4rem; }.window-bar small { display: none; } }
+.home-panel { min-height: 65vh; align-items: end; justify-content: space-between; gap: 4rem; }
+.home-panel.active { display: flex; }
+.home-copy { max-width: 790px; }
+.home-copy h1 { font-size: clamp(3.5rem, 8vw, 7.8rem); }
+.home-cta { margin-top: 2.25rem; }
+.home-note { display: flex; gap: 1rem; align-items: flex-start; max-width: 270px; padding: 1.25rem 0; border-top: 1px solid var(--ink); }
+.note-index { color: #ec684f; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; }
+.home-note strong { font-family: 'Space Grotesk', sans-serif; }
+.home-note p { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 760px) { .home-panel.active { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-height: 70vh; gap: 3rem; } }
