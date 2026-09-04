@@ -7,7 +7,7 @@
     <meta name="description" content="TN-AI workshop instructions and a sample site by Arsenii." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Press+Start+2P&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -20,6 +20,7 @@
         <button class="nav-link" type="button" data-page="instructions-day5" aria-pressed="false">Day 5 Instruction</button>
         <button class="nav-link" type="button" data-page="sample" aria-pressed="false">Sample placeholder site</button>
         <button class="nav-link" type="button" data-page="blackjack" aria-pressed="false">Blackjack</button>
+        <button class="nav-link" type="button" data-page="carracing" aria-pressed="false">Car Racing</button>
         <button class="nav-link" type="button" data-page="apmicro" aria-pressed="false">AP Micro</button>
       </nav>
       <span class="header-status"><i></i> Workshop 03</span>
@@ -123,6 +124,24 @@
         </div>
       </section>
 
+      <section id="carracing" class="page-panel carracing-panel" aria-labelledby="carracing-title">
+        <div class="racing-copy">
+          <p class="kicker">Car Racing / Canvas game</p>
+          <h1 id="carracing-title">Dodge the <em>traffic.</em></h1>
+          <p class="intro-copy">A retro canvas racer built with five Cline prompts (see <code>car_racing_test/prompts.md</code>). Steer with the arrow keys and pass as many cars as you can — every car that leaves the screen is a point. Crash and press Space to restart.</p>
+          <div class="racing-controls">
+            <span><kbd>&#8592;</kbd><kbd>&#8594;</kbd> Steer</span>
+            <span><kbd>Space</kbd> Restart</span>
+          </div>
+        </div>
+        <div class="racing-game" role="group" aria-label="Car racing game">
+          <div class="window-bar"><span></span><span></span><span></span><small>car_racing_test / index.html</small></div>
+          <div class="racing-screen">
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+          </div>
+        </div>
+      </section>
+
       <section id="apmicro" class="page-panel apmicro-panel" aria-labelledby="apmicro-title">
         <div class="page-intro">
           <p class="kicker">AP Microeconomics / Unit 1</p>
@@ -153,6 +172,7 @@
     <footer><span>TN-AI</span><span>Learn by making</span></footer>
     <script src="flashcards-data.js"></script>
     <script src="flashcards.js"></script>
+    <script src="car-racing.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

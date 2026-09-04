@@ -8,9 +8,15 @@ const showPage = (pageId) => {
     button.setAttribute('aria-pressed', String(isActive));
   });
   pagePanels.forEach((panel) => panel.classList.toggle('active', panel.id === pageId));
+  // Let embedded widgets (e.g. the car racing game) react to page switches.
+  document.dispatchEvent(new CustomEvent('pagechange', { detail: { page: pageId } }));
 };
 
 pageButtons.forEach((button) => button.addEventListener('click', () => showPage(button.dataset.page)));
+
+// Announce the page that is open on load.
+const initialPanel = document.querySelector('.page-panel.active');
+document.dispatchEvent(new CustomEvent('pagechange', { detail: { page: initialPanel ? initialPanel.id : 'home' } }));
 
 const greetings = [
   'Hello from the other side of the screen.',

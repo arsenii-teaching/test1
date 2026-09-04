@@ -92,3 +92,14 @@ footer { display: flex; justify-content: space-between; max-width: 1240px; margi
 .study-hint code { color: var(--ink); font-size: 0.75rem; }
 @media (max-width: 760px) { .flashcard-study { box-shadow: 8px 10px 0 var(--ink); } .study-content { padding: 1.25rem; } .flashcard { min-height: 300px; } }
 @media (max-width: 480px) { .study-actions { flex-wrap: wrap; } .study-actions .table-button { min-width: 46%; } .flashcard { min-height: 280px; } .flashcard-face { padding: 1.4rem; } }
+/* Car Racing */
+.carracing-panel { display: none; grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr); gap: 6vw; align-items: center; min-height: 65vh; }
+.carracing-panel.active { display: grid; }
+.racing-copy h1 { font-size: clamp(3rem, 6.5vw, 6.2rem); }
+.racing-controls { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; margin-top: 1.75rem; }
+.racing-controls span { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--muted); font-size: 0.8rem; font-weight: 700; }
+.racing-controls kbd { padding: 0.2rem 0.55rem; border: 1px solid var(--ink); border-bottom-width: 3px; border-radius: 6px; background: var(--card); color: var(--ink); font-family: 'Courier New', monospace; font-size: 0.72rem; }
+.racing-game { overflow: hidden; border: 1px solid var(--ink); border-radius: 14px; background: var(--card); box-shadow: 14px 16px 0 var(--ink); }
+.racing-screen { display: flex; justify-content: center; padding: 1.75rem; background: #1a1a1a; }
+#gameCanvas { display: block; width: min(400px, 100%); height: auto; border: 4px solid #f0f0f0; background: #1a1a1a; }
+@media (max-width: 760px) { .carracing-panel.active { display: flex; flex-direction: column; align-items: stretch; gap: 3rem; } .racing-game { box-shadow: 8px 10px 0 var(--ink); } .racing-screen { padding: 1rem; } }

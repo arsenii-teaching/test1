@@ -1,0 +1,24 @@
+/* ===== Prompt 1: dark background, canvas centered horizontally ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a; /* dark background */
+    /* ===== Prompt 2: retro font for any future text ===== */
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* ===== Prompt 2: vertical centering ===== */
+    min-height: 100vh;
+}
+
+/* ===== Prompt 2: bordered canvas, fixed size ===== */
+canvas {
+    border: 4px solid #f0f0f0;
+    width: 400px;
+    height: 600px;
+    display: block;
+}
