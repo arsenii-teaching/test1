@@ -171,7 +171,7 @@
     ctx.font = `16px ${RETRO_FONT}`;
     ctx.fillText(`Final Score: ${score}`, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 20);
 
-    ctx.fillStyle = '#ffff66';
+    ctx.fillStyle = '#ff0000'; // restart hint text
     ctx.font = `12px ${RETRO_FONT}`;
     ctx.fillText('Press SPACE to restart', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 60);
   }
