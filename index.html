@@ -14,9 +14,9 @@
     <header class="site-header">
       <a class="brand" href="#home" aria-label="TN-AI home"><span class="brand-mark">TN</span><span>TN-AI</span></a>
       <nav class="site-nav" aria-label="Main navigation">
-        <button class="nav-link active" type="button" data-page="home" aria-pressed="true">Home</button>
+        <button class="nav-link" type="button" data-page="home" aria-pressed="false">Home</button>
         <button class="nav-link" type="button" data-page="instructions" aria-pressed="false">Day 3 Instruction</button>
-        <button class="nav-link flash-green" type="button" data-page="instructions-day4" aria-pressed="false">Day 4 Instruction</button>
+        <button class="nav-link flash-green active" type="button" data-page="instructions-day4" aria-pressed="true">Day 4 Instruction</button>
         <button class="nav-link" type="button" data-page="instructions-day5" aria-pressed="false">Day 5 Instruction</button>
         <button class="nav-link" type="button" data-page="sample" aria-pressed="false">Sample placeholder site</button>
         <button class="nav-link" type="button" data-page="blackjack" aria-pressed="false">Blackjack</button>
@@ -27,7 +27,7 @@
     </header>
 
     <main>
-      <section id="home" class="page-panel home-panel active" aria-labelledby="home-title">
+      <section id="home" class="page-panel home-panel" aria-labelledby="home-title">
         <div class="home-copy">
           <p class="kicker">TN-AI / Learn by making</p>
           <h1 id="home-title">Start with an idea.<br /><em>Build from there.</em></h1>
@@ -79,24 +79,25 @@
         </div>
       </section>
 
-      <section id="instructions-day4" class="page-panel" aria-labelledby="instructions-day4-title">
+      <section id="instructions-day4" class="page-panel active" aria-labelledby="instructions-day4-title">
         <div class="page-intro">
           <p class="kicker">Fourth meeting / Free coding</p>
           <h1 id="instructions-day4-title">From an idea<br /><em>to a game.</em></h1>
           <p class="intro-copy">Creation practice before the Git(Hub) meeting: let an AI chatbot help you come up with an idea, turn it into a short sequence of Cline prompts, and build something real.</p>
         </div>
-        <div class="instruction-grid">
+        <div class="instruction-grid instruction-grid-single">
           <article class="instruction-card prompt-card"><div class="step-number">01</div><div><h2>Ask a chatbot for ideas</h2><p>Tip for full brainless mode: use an AI chatbot like DeepSeek or ChatGPT to generate ideas, develop them, then ask it to write the Cline prompts for you — just describe your situation. For example:</p><pre><code>I want to create a site with a simple car racing
 game. I am using VSCode with Cline. Give me a
 short sequence of Cline prompts to make this
 happen.</code></pre></div></article>
           <article class="instruction-card"><div class="step-number">02</div><div><h2>Save your prompts</h2><p>Keep the generated prompts in a <code>prompts.md</code> file so you can reuse and refine them later.</p></div></article>
-          <article class="instruction-card"><div class="step-number">03</div><div><h2>Prompt 1 — set the stage</h2><p>Create an <code>index.html</code> with a <code>&lt;canvas&gt;</code> element, and link a <code>style.css</code> and a <code>script.js</code> (both in the same folder). The page should have a dark background and the canvas centered horizontally. No other content yet.</p></div></article>
-          <article class="instruction-card"><div class="step-number">04</div><div><h2>Prompt 2 — style the canvas</h2><p>Style the canvas with a border, a fixed 400&times;600 size, and center it vertically on the page. Add a simple retro font for any future text.</p></div></article>
-          <article class="instruction-card"><div class="step-number">05</div><div><h2>Prompt 3 — basic game loop</h2><p>Get the canvas and 2D context. Define the player car as a rectangle (30&times;60) starting at the bottom center. Handle keydown/keyup for the left/right arrow keys to move the car (5 px per frame). Draw the road with two gray lanes and dashed white center lines scrolling downward. Use requestAnimationFrame for the loop.</p></div></article>
-          <article class="instruction-card"><div class="step-number">06</div><div><h2>Prompt 4 — enemy cars</h2><p>Spawn a new enemy (random x position, same size as the player) every 60 frames, moving downward at 3 px per frame. When it goes off the bottom, remove it and increase the score by 1, displayed at the top left. AABB collision between the player and an enemy sets gameOver.</p></div></article>
-          <article class="instruction-card"><div class="step-number">07</div><div><h2>Prompt 5 — game over</h2><p>When gameOver is true, stop the game loop and show a Game Over message with the final score on the canvas. Restart with the Spacebar (reset all variables, clear enemies, restart the loop) and prevent the page from scrolling with the arrow keys (preventDefault).</p></div></article>
-          <article class="instruction-card closing-card"><div class="step-number">08</div><div><h2>See the result</h2><p>These five prompts produced a working retro racer — the exact game from the <code>car_racing_test</code> folder now lives on this site as the Car Racing page.</p><button class="primary-button example-button" type="button" data-page="carracing">Open the Car Racing game <span aria-hidden="true">&#8599;</span></button></div></article>
+          <article class="instruction-card has-media"><div class="step-number">03</div><div><h2>Hand it to Cline</h2><p>Type <code>run prompt.md</code> in the Cline chat and let Act mode execute the prompts one by one.</p><figure><img src="instruction-4/image.png" alt="Cline chat input in VS Code with 'run prompt.md' typed in" loading="lazy" /><figcaption>Type "run prompt.md" in the Cline chat, then press Act.</figcaption></figure></div></article>
+          <article class="instruction-card"><div class="step-number">04</div><div><h2>Prompt 1 — set the stage</h2><p>Create an <code>index.html</code> with a <code>&lt;canvas&gt;</code> element, and link a <code>style.css</code> and a <code>script.js</code> (both in the same folder). The page should have a dark background and the canvas centered horizontally. No other content yet.</p></div></article>
+          <article class="instruction-card"><div class="step-number">05</div><div><h2>Prompt 2 — style the canvas</h2><p>Style the canvas with a border, a fixed 400&times;600 size, and center it vertically on the page. Add a simple retro font for any future text.</p></div></article>
+          <article class="instruction-card"><div class="step-number">06</div><div><h2>Prompt 3 — basic game loop</h2><p>Get the canvas and 2D context. Define the player car as a rectangle (30&times;60) starting at the bottom center. Handle keydown/keyup for the left/right arrow keys to move the car (5 px per frame). Draw the road with two gray lanes and dashed white center lines scrolling downward. Use requestAnimationFrame for the loop.</p></div></article>
+          <article class="instruction-card"><div class="step-number">07</div><div><h2>Prompt 4 — enemy cars</h2><p>Spawn a new enemy (random x position, same size as the player) every 60 frames, moving downward at 3 px per frame. When it goes off the bottom, remove it and increase the score by 1, displayed at the top left. AABB collision between the player and an enemy sets gameOver.</p></div></article>
+          <article class="instruction-card"><div class="step-number">08</div><div><h2>Prompt 5 — game over</h2><p>When gameOver is true, stop the game loop and show a Game Over message with the final score on the canvas. Restart with the Spacebar (reset all variables, clear enemies, restart the loop) and prevent the page from scrolling with the arrow keys (preventDefault).</p></div></article>
+          <article class="instruction-card closing-card"><div class="step-number">09</div><div><h2>See the result</h2><p>These five prompts produced a working retro racer — the exact game from the <code>car_racing_test</code> folder now lives on this site as the Car Racing page.</p><button class="primary-button example-button" type="button" data-page="carracing">Open the Car Racing game <span aria-hidden="true">&#8599;</span></button></div></article>
         </div>
       </section>
 

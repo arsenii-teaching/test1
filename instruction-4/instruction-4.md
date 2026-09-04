@@ -1,12 +1,12 @@
 
 Day 4: free coding (I already posted day 5 about gihub integration for backups, but lets do some creation practice first.) 
 
+1. 
  Tip (for full brainless mode): you can use AI chatbot like deepseek or chat gpt to generate ideas, then develop them, then generate Cline prompt, jsut describe your situation. Example: "I want to create a site with simple car racing game. I am using VSCode with Cline. Give me  a shortsequence of Cline prompts to make this happen.", You can save the prompts in prompts.md file for later refernce.
 
 
 
-
-Example output from deepseek: 
+2. Example output from deepseek: 
 
 Prompt 1
 
@@ -52,3 +52,5 @@ Restart the game when the player presses the Spacebar (reset all variables, clea
 
 Also, prevent the page from scrolling with arrow keys (use preventDefault).
 
+3. You can run these prompt through Cline one by one, or gather them in prompts.md for later and ask cline to execute
+![alt text](image.png)

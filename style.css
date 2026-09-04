@@ -116,3 +116,6 @@ footer { display: flex; justify-content: space-between; max-width: 1240px; margi
 .nav-link.flash-green:not(.active),
 .home-link.flash-green:not(.active) { animation: flash-green 1.2s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .nav-link.flash-green:not(.active), .home-link.flash-green:not(.active) { animation: none; background: #72bf70; color: var(--ink); } }
+/* Day 4: parts stacked top to bottom */
+.instruction-grid-single { grid-template-columns: 1fr; max-width: 900px; }
+.instruction-grid-single .has-media, .instruction-grid-single .prompt-card { grid-column: auto; }
