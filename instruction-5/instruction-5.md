@@ -1,5 +1,5 @@
 # Instruction
-## 4th Meeting of TN-AI
+## 5th Meeting of TN-AI
 Whether you program the old way, using ai agent or ai chat, git(hub) is a must in modern development.
 ạ) keep track of project versions so you can revert unwanted changes if needed. (focus of today)
 b) how to share your project with everybody if you wish so.
